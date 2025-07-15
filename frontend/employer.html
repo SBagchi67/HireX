@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employer Dashboard - HireX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1><a href="index.html" class="logo-link">HireX</a></h1>
+
+      <nav>
+        <a href="employer.html" class="active">Dashboard</a>
+        <a href="index.html">Home</a>
+        <a href="index.html" class="btn">Logout</a>
+        <button id="theme-toggle" class="theme-btn">
+          <span class="light-icon">🌞</span>
+          <span class="dark-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <div class="container">
+
+      <!-- Welcome -->
+      <section class="welcome-banner">
+        <h2>Welcome, Employer!</h2>
+        <p>Post new jobs and manage listings with ease.</p>
+      </section>
+
+      <!-- Post a Job -->
+      <section class="recommended-jobs">
+        <h2>Post a New Job</h2>
+        <form>
+          <input type="text" placeholder="Job Title" required />
+          <input type="text" placeholder="Company Name" required />
+          <textarea placeholder="Job Description" rows="4" required></textarea>
+          <select required>
+            <option value="">Select Accessibility Feature</option>
+            <option value="screen-reader">Screen Reader Friendly</option>
+            <option value="wheelchair">Wheelchair Accessible</option>
+            <option value="remote">Remote Option</option>
+          </select>
+          <button type="submit" class="btn primary">Post Job</button>
+        </form>
+      </section>
+
+      <!-- Posted Jobs -->
+      <section class="recent-activity">
+        <h2>Your Posted Jobs</h2>
+        <ul class="activity-list">
+          <li>
+            <span class="activity-icon">📌</span>
+            <p>Frontend Developer at CodeWorks</p>
+            <span class="activity-time">Posted 3 days ago</span>
+          </li>
+          <li>
+            <span class="activity-icon">📌</span>
+            <p>Accessibility Tester at DiverseTech</p>
+            <span class="activity-time">Posted 5 days ago</span>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 HireX. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

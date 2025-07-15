@@ -1,36 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inclusive Job Portal</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Inclusive Job Portal</h1>
-      <nav>
-        <a href="login.html">Login</a>
-        <a href="signup.html" class="btn">Sign Up</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireX </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+  // Font size adjustment
+  function adjustFontSize(step) {
+    const html = document.documentElement;
+    const currentSize = parseFloat(window.getComputedStyle(html).fontSize);
+    html.style.fontSize = (currentSize + step) + 'px';
+  }
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Connecting Talent with Inclusive Opportunities</h2>
-        <p>Empowering job seekers with disabilities to find accessible and meaningful jobs.</p>
-        <a href="signup.html" class="btn primary">Get Started</a>
+  // Contrast toggle
+  function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
+
+  // Screen reader enhancements
+  function enableScreenReaderMode() {
+    document.body.setAttribute('aria-live', 'polite');
+    // Additional SR enhancements would go here
+    alert('Screen reader mode activated');
+  }
+</script>
+    
+  </head>
+  <body>
+
+    <!-- Accessibility Toolbar - Add RIGHT AFTER opening <body> tag -->
+  <div class="accessibility-toolbar" aria-label="Accessibility controls">
+    <button aria-label="Increase text size" onclick="adjustFontSize(1)">
+      <i class="fas fa-text-height"></i> A+
+    </button>
+    <button aria-label="Decrease text size" onclick="adjustFontSize(-1)">
+      <i class="fas fa-text-height"></i> A-
+    </button>
+    <button aria-label="Toggle high contrast mode" onclick="toggleContrast()">
+      <i class="fas fa-contrast"></i>
+    </button>
+    <button aria-label="Enable screen reader mode" onclick="enableScreenReaderMode()">
+      <i class="fas fa-assistive-listening-systems"></i>
+    </button>
+  </div>
+
+    <div class="background-image"></div>
+
+    <!-- Header -->
+    <header class="sticky-header">
+  <div class="container">
+    <h1 class="logo">
+      <a id="p" href="index.html">HireX</a>
+    </h1>
+    
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <p><a href="login.html">Login</a></p>
+        <p><a href="signup.html" class="btn btn-nav">Sign Up</a></p>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+  <i class="fas fa-moon light-icon"></i>
+  <i class="fas fa-sun dark-icon"></i>
+</button>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Updated Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">New Feature: Accessibility Profile</span>
+      <h1 style="color: white;">Inclusive for <span style="color: #ffd700;">Everyone</span></h1>
+      <p class="subtitle">
+        Empowering talent across all abilities. Explore accessible job opportunities with confidence.
+      </p>
+      <div class="hero-cta">
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+        <a href="about.html" class="btn btn-secondary">How It Works</a>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Inclusive Jobs. All rights reserved.</p>
+      
     </div>
-  </footer>
-</body>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+           alt="People shaking hands" 
+           loading="lazy">
+      <div class="hero-card">
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- Search Bar -->
+      <section class="search-bar">
+        <div class="container">
+          <form class="search-form" aria-label="Job search form">
+            <div class="search-input">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Job title, keywords, or company" aria-label="Job search keywords" />
+            </div>
+            <div class="search-select">
+              <i class="fas fa-map-marker-alt"></i>
+              <select aria-label="Job location">
+                <option value="">Location</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Pune">Pune</option>
+              </select>
+            </div>
+            <div class="search-select">
+              <i class="fas fa-briefcase"></i>
+              <select aria-label="Job type">
+                <option value="">Job Type</option>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="contract">Contract</option>
+                <option value="internship">Internship</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-search"></i> Search Jobs
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Features -->
+     <section class="features">
+  <div class="container">
+    <div class="section-header center">
+      <h2>Your Complete <span class="gradient-text">Job Search Solution</span></h2>
+      <p class="section-description">We're committed to making job searching accessible for everyone</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-universal-access"></i>
+        </div>
+        <h3>Accessibility First</h3>
+        <p>Built from the ground up with accessibility in mind for all users.</p>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Inclusive Employers</h3>
+        <p>Connect with companies that value diversity and inclusion.</p>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3>Smart Matching</h3>
+        <p>Our algorithm matches you with jobs that fit your skills and needs.</p>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h3>Career Resources</h3>
+        <p>Accessibility-focused resume tips and interview preparation.</p>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header center">
+      <h2>How <span class="gradient-text">HireX</span> Works</h2>
+      <p class="section-description">Getting your dream job has never been easier</p>
+    </div>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Create Your Profile</h3>
+          <p>Set up your profile with your skills, experience, and accessibility preferences.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Find Matching Jobs</h3>
+          <p>Browse jobs that match your criteria and accessibility needs.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Apply With Ease</h3>
+          <p>Apply directly through our accessible application system.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Start Your Career</h3>
+          <p>Begin your new career with a company that values your unique talents.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>    
+      <!-- Call to Action -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta-box">
+            <h2>Ready to Start Your Job Search?</h2>
+            <p>Join thousands of job seekers who found their dream jobs through HireX.</p>
+            <div class="cta-buttons">
+              <a href="signup.html" class="btn btn-primary glow-on-hover">
+                <i class="fas fa-user-plus"></i> Sign Up Free
+              </a>
+              <a href="login.html" class="btn btn-secondary">
+                <i class="fas fa-sign-in-alt"></i> Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3 class="logo">
+              <a href="index.html">HireX</a>
+              <span class="logo-badge">Inclusive</span>
+            </h3>
+            <p>Making job searching accessible for everyone, regardless of ability.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 HireX. All rights reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Accessibility Statement</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="script.js"></script>
+    <script src="js/accessibility-toolbar.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
 </html>

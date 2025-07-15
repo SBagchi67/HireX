@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Listings - HireX</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><a href="index.html" class="logo-link">HireX</a></h1>
+
+        <nav>
+          <a href="dashboard.html"
+            ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+          >
+          <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+          <a href="jobs.html" class="active"
+            ><i class="fas fa-briefcase"></i> Jobs</a
+          >
+          <a href="messages.html"
+            ><i class="fas fa-envelope"></i> Messages
+            <span class="notification-badge">3</span></a
+          >
+          <a href="index.html" class="btn"
+            ><i class="fas fa-sign-out-alt"></i> Logout</a
+          >
+          <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="job-listings">
+      <div class="container">
+        <section class="job-search">
+          <h1>Find Your Dream Job</h1>
+          <div class="search-filters">
+            <input
+              type="text"
+              id="searchTitle"
+              placeholder="Job title or keywords"
+            />
+            <input type="text" id="searchLocation" placeholder="Location" />
+            <select id="jobType">
+              <option value="">All Types</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Remote">Remote</option>
+              <option value="Contract">Contract</option>
+            </select>
+            <button id="searchBtn" class="btn primary">Search</button>
+          </div>
+        </section>
+
+        <div class="job-results">
+          <aside class="filters">
+            <h4>Your Resume</h4>
+            <div id="resumeUploadContainer">
+              <input
+                type="file"
+                id="resumeInput"
+                accept=".pdf,.doc,.docx"
+                style="display: none"
+              />
+              <button class="btn secondary" id="uploadBtn">
+                <i class="fas fa-upload"></i> Upload Resume
+              </button>
+              <p id="resumeStatus">No resume uploaded</p>
+            </div>
+
+            <h3>Filters</h3>
+            <div class="filter-group">
+              <h4>Accessibility Features</h4>
+              <label
+                ><input
+                  type="checkbox"
+                  name="accessibility"
+                  value="wheelchair"
+                />
+                Wheelchair Accessible</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="accessibility"
+                  value="screen_reader"
+                />
+                Screen Reader Friendly</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="accessibility"
+                  value="sign_language"
+                />
+                Sign Language Support</label
+              >
+            </div>
+            <div class="filter-group">
+              <h4>Skills</h4>
+              <input
+                type="text"
+                id="skillsInput"
+                placeholder="Add skills (comma separated)"
+              />
+            </div>
+          </aside>
+
+          <section class="jobs-section">
+            <div class="jobs-tabs">
+              <button class="tab-btn active" id="allJobsTab">All Jobs</button>
+              <button class="tab-btn" id="appliedJobsTab">Applied Jobs</button>
+            </div>
+
+            <div id="jobsContainer">
+              <!-- Jobs will load here -->
+            </div>
+          </section>
+        </div>
+      </div>
+      <div id="paginationContainer" class="pagination"></div>
+      <!-- <div id="jobsContainer"></div> -->
+    </main>
+
+    <script src="jobs.js"></script>
+  </body>
+</html>

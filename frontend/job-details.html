@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details - HireX</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="container">
+      <div class="logo-container">
+        <h1><i class="fas fa-handshake"></i> HireX</h1>
+      </div>
+      <nav>
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="jobs.html" class="active"><i class="fas fa-briefcase"></i> Jobs</a>
+        <a href="messages.html"><i class="fas fa-envelope"></i> Messages <span class="notification-badge">3</span></a>
+        <a href="index.html" class="btn logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <button id="theme-toggle" class="theme-btn">
+          <i class="fas fa-sun light-icon"></i>
+          <i class="fas fa-moon dark-icon"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="job-detail-page">
+    <div class="job-detail-container">
+      <a href="jobs.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Jobs
+      </a>
+
+      <div class="job-header">
+        <div class="job-title">
+          <h1 id="jobTitle">Inclusive UX Designer</h1>
+          <div class="job-meta">
+            <span id="companyName"><i class="fas fa-building"></i> DesignForAll Inc.</span>
+            <span id="jobLocation"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+            <span id="jobType"><i class="fas fa-clock"></i> Contract</span>
+            <span id="jobSalary"><i class="fas fa-money-bill-wave"></i> Competitive Salary</span>
+          </div>
+        </div>
+        <div class="job-actions-mobile">
+          <button class="btn primary">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="job-content">
+        <div class="job-main">
+          <section class="job-description">
+            <h2><i class="fas fa-align-left"></i> Description</h2>
+            <p id="jobDescription">Design interfaces that are usable by everyone, especially users with visual or motor disabilities. We're looking for a passionate designer who understands accessibility standards and can create inclusive experiences.</p>
+
+            <h2><i class="fas fa-list-check"></i> Requirements</h2>
+            <ul id="requirementsList">
+              <li>3+ years of UX design experience</li>
+              <li>Strong knowledge of WCAG 2.1 guidelines</li>
+              <li>Experience with assistive technologies</li>
+              <li>Portfolio demonstrating accessible design work</li>
+              <li>Familiarity with HTML/CSS for prototyping</li>
+            </ul>
+
+            <h2><i class="fas fa-star"></i> Skills Required</h2>
+            <div class="skill-tags" id="skillsTags">
+              <span class="skill-tag">UX Design</span>
+              <span class="skill-tag">Accessibility</span>
+              <span class="skill-tag">WCAG</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">User Research</span>
+            </div>
+
+            <div class="accessibility-tags">
+              <h3><i class="fas fa-universal-access"></i> Accessibility Features</h3>
+              <div id="accessibilityTags">
+                <span class="badge"><i class="fas fa-eye"></i> Screen Reader Support</span>
+                <span class="badge"><i class="fas fa-keyboard"></i> Keyboard Navigation</span>
+                <span class="badge"><i class="fas fa-palette"></i> High Contrast Mode</span>
+                <span class="badge"><i class="fas fa-text-height"></i> Adjustable Text Size</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="job-sidebar">
+          <section class="job-actions">
+            <h3>Apply for this position</h3>
+            <div class="resume-upload">
+              <label>Upload Your Resume</label>
+              <div class="file-input-container">
+                <input type="file" id="resumeInput" accept=".pdf,.doc,.docx">
+                <label for="resumeInput" class="file-input-label">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <span>Click to browse or drag & drop</span>
+                  <div class="file-name" id="resumeName">No file selected</div>
+                </label>
+              </div>
+            </div>
+            <button id="applyBtn" class="apply-btn">Apply Now</button>
+            <p id="applyMsg" class="apply-message"></p>
+          </section>
+
+          <section class="company-card">
+            <h3>About DesignForAll Inc.</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+            <p><i class="fas fa-users"></i> 50-200 employees</p>
+            <p><i class="fas fa-globe"></i> <a href="#">www.designforall.com</a></p>
+            <p><i class="fas fa-star"></i> 4.8 ★ (32 reviews)</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3 class="logo">
+            <a href="index.html">HireX</a>
+            <span class="logo-badge">Inclusive</span>
+          </h3>
+          <p>Making job searching accessible for everyone, regardless of ability.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 HireX. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="job-details.js"></script>
+
+ 
+
+</body>
+</html>

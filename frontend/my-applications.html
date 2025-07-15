@@ -1,0 +1,25 @@
+<div id="applicationsList">
+  <h2>Your Applications</h2>
+  <!-- Applications will appear here -->
+</div>
+
+<script>
+async function loadApplications() {
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) return window.location.href = 'login.html';
+
+  const response = await fetch(`/api/applications/my-applications/${user._id}`);
+  const applications = await response.json();
+
+  applications.forEach(app => {
+    document.getElementById('applicationsList').innerHTML += `
+      <div class="application-card">
+        <h3>${app.job.title}</h3>
+        <p>Status: ${app.status}</p>
+        <p>Applied on: ${new Date(app.appliedDate).toLocaleDateString()}</p>
+      </div>
+    `;
+  });
+}
+loadApplications();
+</script>

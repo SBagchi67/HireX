@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - HireX</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>HireX</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-section">
+        <div class="container">
+          <div class="auth-card">
+            <h2>Create Your Account</h2>
+            
+            <form id="signup-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-input-container">
+                <input type="password" id="password" placeholder="Create a password" required>
+                <button type="button" class="toggle-password" aria-label="Show password"><i class="fas fa-eye"></i>
+                </button>
+                </div>
+                <small class="hint">Use 8+ characters with a mix of letters, numbers & symbols</small>
+              </div>
+              
+              <div class="form-group">
+                <label>I am signing up as:</label>
+                <div class="role-options">
+                  <label class="role-option">
+                    <input type="radio" name="role" value="jobseeker" checked>
+                    <div class="role-card">
+                      <i class="fas fa-user-tie"></i>
+                      <span>Job Seeker</span>
+                    </div>
+                  </label>
+                  
+                  <label class="role-option">
+                    <input type="radio" name="role" value="employer">
+                    <div class="role-card">
+                      <i class="fas fa-briefcase"></i>
+                      <span>Employer</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group accessibility-group">
+                <label for="accessibility">Accessibility Preferences (Optional)</label>
+                <select id="accessibility">
+                  <option value="">No specific needs</option>
+                  <option value="screen_reader">Screen reader compatible</option>
+                  <option value="high_contrast">High contrast mode</option>
+                  <option value="keyboard_only">Keyboard navigation only</option>
+                  <option value="dyslexia_friendly">Dyslexia-friendly fonts</option>
+                </select>
+                <small class="hint">We want to make HireX accessible to everyone</small>
+              </div>
+              
+              <button type="submit" class="btn primary">Create Account</button>
+              
+              <div class="auth-footer">
+                Already have an account? <a href="login.html">Log in</a>
+              </div>
+            </form>
+            
+            <p id="signupMessage" class="message"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 HireX. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="signup.js"></script>
+  </body>
+</html>

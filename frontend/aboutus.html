@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About HireX - Breaking Barriers, Creating Opportunities</title>
+    <style>
+        :root {
+            --primary: #4a6bff;
+            --secondary: #ff6b6b;
+            --accent: #6bffb4;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background-color: #f5f7ff;
+        }
+        
+        header {
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-top: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .mission-box {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 3px solid var(--secondary);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .color-block {
+            height: 8px;
+            background: var(--gradient);
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: transparent;
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+    </style>
+    <link rel="stylesheet" href="/css/accessibility-toolbar.css">
+</head>
+<body>
+    <header>
+        <h1>Breaking Barriers, Creating Opportunities</h1>
+        <p>Our commitment to inclusive employment</p>
+    </header>
+    
+    <div class="container">
+        <div class="mission-box">
+            <h2>Our Mission</h2>
+            <p>At HireX, we believe talent knows no boundaries. We're dedicated to connecting job seekers of all abilities with employers who value diversity and inclusion.</p>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Ready to Get Started?</h2>
+            <p>Join our inclusive community today and discover new opportunities</p>
+            <div class="button-group">
+                <a href="signup.html" class="btn btn-primary">I'm a Job Seeker</a>
+                <a href="employer.html" class="btn btn-secondary">I'm an Employer</a>
+            </div>
+        </div>
+        
+        <div class="color-block"></div>
+        
+        <h2>Why HireX Stands Out</h2>
+        
+        <div class="feature-card">
+            <h3>Accessibility First</h3>
+            <p>Built from the ground up to meet WCAG 2.1 AA standards with screen reader support, keyboard navigation, and customizable display options.</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>Inclusive Network</h3>
+            <p>Partnered with hundreds of employers committed to building diverse teams where everyone can thrive.</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>Personalized Support</h3>
+            <p>Our team provides individualized assistance to both job seekers and employers throughout the hiring process.</p>
+        </div>
+    </div>
+    <script src="/js/accessibility-toolbar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js"></script>
+<script src="js/firebase-init.js"></script>
+</body>
+</html>
