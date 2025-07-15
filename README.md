@@ -1,6 +1,6 @@
-# InclusionHire – Accessible Job Portal
+# HireX – Accessible Job Portal
 
-**InclusionHire** is an accessible and user-centric job portal designed to promote inclusive hiring for people of all abilities. It features a user-friendly frontend and a powerful backend that allows job seekers and employers to connect in a meaningful and accessible way.
+**HireX** is an accessible and user-centric job portal designed to promote inclusive hiring for people of all abilities. It features a user-friendly frontend and a powerful backend that allows job seekers and employers to connect in a meaningful and accessible way.
 
 ---
 
@@ -29,7 +29,7 @@
 ## 📁 Folder Structure
 
 ```bash
-InclusionHire/
+HireX/
 ├── backend/
 │   ├── config/
 │   ├── models/
